@@ -2,16 +2,16 @@
 spring:
   profiles:
     active: development
-# Database
+  # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/book_db?createDatabaseIfNotExist=true
-    username: postgres
-    password: postgres
-# JPA properties
+    url: jdbc:postgresql://ec2-174-129-41-127.compute-1.amazonaws.com:5432/d9in8i9c2ri1ua?sslmode=requiere
+    username: d9in8i9c2ri1ua
+    password: 67688989304df801910233c48c599ae8c624c480a4e9069714fd3d0d5544248a
+  # JPA properties
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create-drop
     show-sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -24,12 +24,12 @@ logging:
   level:
     org.springframework: INFO
     org.hibernate: DEBUG
-# Server configuration
-server:
-  port: 8080
-  sessionTimeout: 30
-# Security configuration
-security:
-  user:
-    name: user
-    password: user
+## Server configuration
+#server:
+#  port: 8080
+#  sessionTimeout: 30
+## Security configuration
+#security:
+#  user:
+#    name: user
+#    password: user
